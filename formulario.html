@@ -1,0 +1,20 @@
+<html>
+<head>
+   <title>Mi primera pagina html</title>
+</head>
+<body>
+	<h1>hola mundo</h1>
+	<form action="" method="">
+		<input type="text" name="ejemplo" placeholder="Escribe algo..." id="ejemplo">
+		<input type="submit" value="Enviar" onclick="return ver()">
+	</form>
+	
+	<!--Puedes borrar esto de abajo, es solo a modo de ejemplo-->
+	<script>
+		function ver(){
+			alert(document.getElementById("ejemplo").value)
+			return false
+		}
+	</script>
+</body>
+</html>
