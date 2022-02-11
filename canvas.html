@@ -1,0 +1,45 @@
+<html>
+<head>
+   <title>Mi primer canvas html</title>
+</head>
+<body>
+	<h1>Canvas Tutorial Básico</h1>
+
+	<a href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage">Fuente de este ejemplo</a>
+
+	<canvas id="canvas" width="150" height="150">
+	</canvas>
+	<script>
+		var canvas = document.getElementById("canvas");
+		if (canvas.getContext) {
+			var ctx = canvas.getContext("2d");
+			
+			//fillRect(x, y, largo, hancho)
+			
+			ctx.fillStyle = "blue";
+			ctx.fillRect (10, 10, 55, 50);
+	
+			ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+			ctx.fillRect (30, 30, 55, 50);
+		}
+	</script>
+<!-------------------------------------------------------------------------------->
+<!--IGNORA ESTO DE ABAJO PUEDES BORRARLO, ES SOLO A MODO DE EJEMPLO -->
+<!-------------------------------------------------------------------------------->
+	<p style="text-align:center">
+		<button id="show_source_code" onclick="view_source_code(event);" >Ver código fuente</button>
+	</p>
+
+	<p id="source_code_result"></p>
+
+	<script>
+		function view_source_code(e){
+			var source = '<html>' + document.body.innerHTML + '</html>';
+			var result = document.getElementById('source_code_result');
+			result.innerText = source;
+            }   
+	</script>
+        
+
+</body>
+</html>
